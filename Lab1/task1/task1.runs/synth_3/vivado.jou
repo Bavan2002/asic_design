@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Sep 16 16:21:26 2026
+# Process ID: 194095
+# Current directory: /home/eren/Downloads/lab1_ece528/lab1/lab1.runs/synth_3
+# Command line: vivado -log lab.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source lab.tcl
+# Log file: /home/eren/Downloads/lab1_ece528/lab1/lab1.runs/synth_3/lab.vds
+# Journal file: /home/eren/Downloads/lab1_ece528/lab1/lab1.runs/synth_3/vivado.jou
+# Running On: fedora, OS: Linux, CPU Frequency: 2952.383 MHz, CPU Physical cores: 4, Host memory: 16465 MB
+#-----------------------------------------------------------
+source lab.tcl -notrace

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Sep 24 16:00:52 2026
+# Process ID: 217629
+# Current directory: /home/eren/Downloads/lab1_ece528/lab1/lab1.runs/impl_3
+# Command line: vivado -log lab.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source lab.tcl -notrace
+# Log file: /home/eren/Downloads/lab1_ece528/lab1/lab1.runs/impl_3/lab.vdi
+# Journal file: /home/eren/Downloads/lab1_ece528/lab1/lab1.runs/impl_3/vivado.jou
+# Running On: fedora, OS: Linux, CPU Frequency: 1851.497 MHz, CPU Physical cores: 4, Host memory: 16465 MB
+#-----------------------------------------------------------
+source lab.tcl -notrace

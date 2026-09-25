@@ -1,0 +1,24 @@
+#
+# An unexpected error has occurred (11)
+#
+Stack:
+/home/eren/Xilinx/Vivado/2023.2/tps/lnx64/jre17.0.7_7/lib//server/libjvm.so(+0xd8797f) [0x7fe6e598797f]
+/home/eren/Xilinx/Vivado/2023.2/tps/lnx64/jre17.0.7_7/lib//server/libjvm.so(JVM_handle_linux_signal+0x24e) [0x7fe6e598846e]
+/lib64/libc.so.6(+0x19fb0) [0x7fe730e20fb0]
+/home/eren/Xilinx/Vivado/2023.2/lib/lnx64.o/librdi_wavedata.so(+0x28ad25) [0x7fe6f468ad25]
+/home/eren/Xilinx/Vivado/2023.2/lib/lnx64.o/librdi_wavedata.so(SimBridge::DataObjMgr::createDrawingBTree(std::vector<SimBridge::IDataObj const*, std::allocator<SimBridge::IDataObj const*> > const&, ISIM::IGuiStatus*, bool)+0x207) [0x7fe6f468b2e7]
+/home/eren/Xilinx/Vivado/2023.2/lib/lnx64.o/librdi_wavedata.so(SimBridge::DataReader::getTransitions(SimBridge::IDataObj const*, long long, long long, long long, SimBridge::ValueFormat const&, std::vector<SimBridge::Transition, std::allocator<SimBridge::Transition> >&) const+0x6f) [0x7fe6f469653f]
+/home/eren/Xilinx/Vivado/2023.2/lib/lnx64.o/librdi_wavedata.so(SG_Model::ModelImp::getTransitions(SimBridge::IDataObj const*, SG_Model::IDatabase*, long long, long long, long long, SimBridge::ValueFormat const&, bool, std::vector<SimBridge::Transition, std::allocator<SimBridge::Transition> >&) const+0xbd) [0x7fe6f473721d]
+/home/eren/Xilinx/Vivado/2023.2/lib/lnx64.o/librdi_wavedata.so(SG_Model::Model::getTransitions(SG_Model::WVDataObject const*, long long, long long, long long, SimBridge::ValueFormat const&, bool, std::vector<SimBridge::Transition, std::allocator<SimBridge::Transition> >&) const+0x12c) [0x7fe6f473893c]
+/home/eren/Xilinx/Vivado/2023.2/lib/lnx64.o/librdi_wavedata.so(+0x3686aa) [0x7fe6f47686aa]
+/home/eren/Xilinx/Vivado/2023.2/lib/lnx64.o/librdi_wavedata.so(SG_Model::WaveformRender::render(SG_Model::WVDataObject const&)+0x294) [0x7fe6f4764d44]
+/home/eren/Xilinx/Vivado/2023.2/lib/lnx64.o/librdi_wavedata.so(WaveViewer::WVWaveformPanel::WaveformTraverser::drawWaveform(SG_Model::WVDataObject const*, int, int)+0x38e) [0x7fe6f47dfc7e]
+/home/eren/Xilinx/Vivado/2023.2/lib/lnx64.o/librdi_wavedata.so(WaveViewer::WVWaveformPanel::WaveformTraverser::handleItemSize(WaveViewer::WVTreeWVObjectModel::ITraverseHandler::TraverseItem const&)+0x52) [0x7fe6f47dff52]
+/home/eren/Xilinx/Vivado/2023.2/lib/lnx64.o/librdi_wavedata.so(WaveViewer::WVTreeWVObjectModel::traverseYRange(SG_Model::WVDataObject const*, WaveViewer::WVTreeWVObjectModel::ITraverseHandler&, int, int, int&, int&) const+0x234) [0x7fe6f47c3474]
+/home/eren/Xilinx/Vivado/2023.2/lib/lnx64.o/librdi_wavedata.so(WaveViewer::WVTreeWVObjectModel::traverseYRange(SG_Model::WVDataObject const*, WaveViewer::WVTreeWVObjectModel::ITraverseHandler&, int, int, int&, int&) const+0x2be) [0x7fe6f47c34fe]
+/home/eren/Xilinx/Vivado/2023.2/lib/lnx64.o/librdi_wavedata.so(WaveViewer::WVTreeWVObjectModel::traverseYRange(WaveViewer::WVTreeWVObjectModel::ITraverseHandler&, int, int) const+0x57) [0x7fe6f47c3637]
+/home/eren/Xilinx/Vivado/2023.2/lib/lnx64.o/librdi_wavedata.so(WaveViewer::WVWaveformPanel::getGraphics(HDGDStringStream&, long&)+0x3a9) [0x7fe6f47df279]
+/home/eren/Xilinx/Vivado/2023.2/lib/lnx64.o/librdi_wavedata.so(WVExecutiveImp::getGraphicsDataSize()+0x9a) [0x7fe6f479b13a]
+/home/eren/Xilinx/Vivado/2023.2/lib/lnx64.o/librdi_wavedata.so(WVExecutive::getGraphicsDataSize()+0xf) [0x7fe6f479b5bf]
+/home/eren/Xilinx/Vivado/2023.2/lib/lnx64.o/librdi_wavedata.so(Java_ui_views_waveform_waveformi_WVExecutive_1getGraphicsDataSize+0x17) [0x7fe6f47e7b97]
+[0x7fe6d554453a]
