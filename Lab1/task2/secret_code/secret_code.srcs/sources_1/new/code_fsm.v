@@ -1,5 +1,9 @@
 `timescale 1ns/1ps
 
+`include "button_fsm.v"
+`include "counter.v"
+`include "timer.v"
+
 module code_fsm(
     input clk,
     input rst,
@@ -17,15 +21,20 @@ reg [3:0] current_state, next_state;
 // Assume input order is important
 parameter [3:0] INIT = 4'b0000;         // Initial state
 parameter [3:0] FIRST_T = 4'b0001;      // 'T'
-parameter [3:0] PREFIX_TL = 4'b0010;    // '42'
-parameter [3:0] PREFIX_TLL = 4'b0011;   // '428' -> final valid state
-parameter [3:0] RESULT_TLLR = 4'b0100;
+parameter [3:0] PREFIX_TL = 4'b0010;    // 'TL'
+parameter [3:0] PREFIX_TLL = 4'b0011;   // 'TLL'
+parameter [3:0] RESULT_TLLR = 4'b0100;  // 'TLLR' -> final valid state
 
 parameter [3:0] FAIL_FIRST = 4'b0101;   // Invalid after 1st input
 parameter [3:0] FAIL_SECOND = 4'b0110;  // Invalid after 2nd input
 parameter [3:0] FAIL_THIRD = 4'b0111;   // Invalid after 3rd input
-parameter [3:0] FAIL_FULLY = 4'b1000;   // Invalid
+parameter [3:0] FAIL_FULLY = 4'b1000;   // Invalid sfter 4th input
 
+
+button_fsm Top_button(.clk(clk), .reset(reset), .press_button(Top), .en_button(enTop));
+button_fsm Left_button(.clk(clk), .reset(reset), .press_button(Left), .en_button(enLeft));
+button_fsm Right_button(.clk(clk), .reset(reset), .press_button(Right), .en_button(enRight));
+button_fsm Down_button(.clk(clk), .reset(reset), .press_button(Down), .en_button(enDown));
 
 // State register - active high reset
 always @(posedge clk) begin
@@ -41,17 +50,15 @@ always @(*) begin
     case(current_state)
         // Waiting for first input
         INIT: begin
-            if (data == 4)
-                next_state = FIRST_4;
-            else if (data == 5)
-                next_state = FIRST_5;
+            if (en)
+                next_state = FIRST_T;
             else begin
                 next_state = FAIL_FIRST;
             end    
         end
         
         // First input was 4
-        FIRST_4: next_state = (data == 2) ? PREFIX_42 : FAIL_SECOND;
+        FIRST_T: next_state = (data == 2) ? PREFIX_42 : FAIL_SECOND;
         
         // First two inputs were 42
         PREFIX_42: next_state = (data == 8) ? RESULT_428 : RESULT_OTHER;
